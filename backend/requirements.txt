@@ -6,3 +6,4 @@ openai
 requests==2.31.0
 flask_cors
 python-dotenv
+gunicorn
