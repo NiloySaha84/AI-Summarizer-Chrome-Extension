@@ -14,6 +14,8 @@ def home():
     return render_template("home.html", transcription=transcription)
 
 @views.route('/summarize', methods=['POST'])
+@cross_origin()
+
 def summarize_text():
     data = request.get_json()
     text = data.get("text", "")
