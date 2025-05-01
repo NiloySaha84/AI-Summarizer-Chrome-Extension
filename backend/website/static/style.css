@@ -1,0 +1,49 @@
+html, body {
+    background-color: #1b263b;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar {
+    background-color: #0d1b2a !important;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    padding: 20px 40px;
+}
+
+h1 {
+    color: #ffffff;
+    font-size: 2rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+.center-container {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+h4 {
+    font-size: 2.2rem;
+    font-weight: 500;
+    color: #e0f7fa;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 30px 40px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    max-width: 800px;
+    width: 100%;
+    transition: all 0.3s ease;
+}
+
+h4:hover {
+    background: rgba(255, 255, 255, 0.08);
+    transform: translateY(-2px);
+}
