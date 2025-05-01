@@ -1,0 +1,21 @@
+html {
+    background-color: #212120;
+    color: #ffffff;
+    font-family: sans-serif;
+}
+
+#summarizeBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1E90FF;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+#summarizeBtn:hover {
+    background-color: #2980b9;
+}
