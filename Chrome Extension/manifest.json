@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
-  "name": "AI Summarizer",
+  "name": "QuickGist AI",
   "version": "1.0",
-  "description": "Summarizes the article/Youtube video on the current page.",
+  "description": "Summarizes article/Youtube video on the current page.",
   "permissions": ["activeTab", "scripting"],
   "host_permissions": ["<all_urls>"],
   "action": {
