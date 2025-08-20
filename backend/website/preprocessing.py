@@ -20,12 +20,17 @@ def yt_audioExtractor(videoLink):
 
 def preprocess(videoLink=None):
 
-    yt_audio = yt_audioExtractor(videoLink=videoLink)
-    if yt_audio:
-        return yt_audio
-    else:
-        flash("Audio Transcription not found", "error")
-        return "Audio Transcription not found"
+    def preprocess(videoLink=None):
+    try:
+        yt_audio = yt_audioExtractor(videoLink=videoLink)
+        if yt_audio and yt_audio.strip():
+            return yt_audio
+        else:
+            flash("Audio Transcription not found", "error")
+            return None
+    except Exception as e:
+        flash(str(e), "error")
+        return None
 
         
 
