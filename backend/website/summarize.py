@@ -8,20 +8,16 @@ client = OpenAI(api_key=api_key)
 
 
 def summarize(text):
+    if not text or not text.strip():
+        return "No valid transcript text available for summarization."
 
-        prompt = f"Please summarize the following in detail:\n\n{text}"
-
-        response = client.chat.completions.create(
-            model="gpt-3.5-turbo",
-            messages=[
-                {"role": "user", "content": prompt},
-            ],
-            stream=False,
-            temperature=0.7,
-            max_tokens=500
-        )
-
-        summary = response.choices[0].message.content
-        return summary
+    prompt = f"Please summarize the following in detail:\n\n{text}"
+    response = client.chat.completions.create(
+        model="gpt-3.5-turbo",
+        messages=[{"role": "user", "content": prompt}],
+        temperature=0.7,
+        max_tokens=500
+    )
+    return response.choices[0].message.content.strip()
 
 
